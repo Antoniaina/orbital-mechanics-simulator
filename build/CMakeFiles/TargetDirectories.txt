@@ -1,0 +1,3 @@
+/media/antoni/DATA/Proj/orbital-mechanics-simulator/build/CMakeFiles/orbital.dir
+/media/antoni/DATA/Proj/orbital-mechanics-simulator/build/CMakeFiles/edit_cache.dir
+/media/antoni/DATA/Proj/orbital-mechanics-simulator/build/CMakeFiles/rebuild_cache.dir
