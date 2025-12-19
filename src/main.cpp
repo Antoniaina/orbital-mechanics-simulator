@@ -21,26 +21,25 @@ int main() {
 
   glfwMakeContextCurrent(window);
 
-  float t = 0.0f;
+  PhysicsSystem physics;
+
+  Body planet;
+  planet.position = {0.5, 0.0, 0.0};
+  planet.velocity = {0.0, 1.0, 0.0};
+  planet.mass = 1.0;
+
+  Renderer2D renderer;
+
+  const double dt = 0.01;
 
   while (!glfwWindowShouldClose(window)) {
     glClear(GL_COLOR_BUFFER_BIT);
 
-    glPointSize(10);
-    glBegin(GL_POINTS);
-    glVertex2f(0.0f, 0.0f);
-    glEnd();
-
-    float x = 0.5f * cos(t);
-    float y = 0.5f * sin(t);
-    glPointSize(5);
-    glBegin(GL_POINTS);
-    glVertex2f(x, y);
-    glEnd();
+    physics.update(planet, dt);
+    renderer.draw(planet);
 
     glfwSwapBuffers(window);
     glfwPollEvents();
-    t += 0.01f;
   }
 
   glfwTerminate();

@@ -1,5 +1,6 @@
 #pragma once
 #include "../physics/Body.hpp"
+#include "gl.h"
 #include <GLFW/glfw3.h>
 
 class Renderer2D {
@@ -13,7 +14,7 @@ public:
     glPointSize(0.5f);
     glBegin(GL_POINTS);
     glVertex2f(static_cast<float>(body.position.x),
-               static_cast<float>(body.position.y));
+               static_cast<float>(body.position.y), );
     glEnd();
   }
 };
