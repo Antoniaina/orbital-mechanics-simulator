@@ -1,3 +1,7 @@
+#include "Vec3.hpp"
+#include "physics/Body.hpp"
+#include "physics/Physics.hpp"
+#include "render/Renderer2d.hpp"
 #include <GLFW/glfw3.h>
 #include <cmath>
 #include <iostream>
